@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'input_page.dart';
 import 'constants.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(BMICalculator());
+void main(){
+  runApp(BMICalculator());
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+  ));
+}
 
 class BMICalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Color(0xFFFFFFFF),
         scaffoldBackgroundColor: Color(0xFEEDEDED),
@@ -25,6 +32,7 @@ class BMICalculator extends StatelessWidget {
     );
   }
 }
+
 
 
 
